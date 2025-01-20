@@ -1,0 +1,282 @@
+/* new font */
+@font-face {
+    font-family: "Apfel Grotezk";
+    src: url(/public/ApfelGrotezk-Regular.otf);
+  }
+  
+  @font-face {
+    font-family: "Combine";
+    src: url(/public/Combine.otf);
+    font-weight: bold;
+  }
+  body {
+    margin: 0;
+    overflow: hidden;
+    opacity: 0;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(180deg, #ffffff 30%, #ADFFB0 100%);
+    justify-content: center;
+    align-items: center;
+    font-family: "Apfel Grotezk", sans-serif;
+    /*gradient as background*/
+    transition: all 1s; /* Smooth transition for background changes */
+  }
+
+  #menu-container {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 20%;
+    height: max-content;
+    transition: all 2s; /* Smooth transition for container changes */
+    /* background-color: red; */
+  }
+
+  #menu-container-fr {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 20.5%;
+    height: max-content;
+    transition: all 2s; /* Smooth transition for container changes */
+    /* background-color: red; */
+  }
+
+  #home-description {
+    margin-top: 4vh;
+    font-family: 'Apfel Grotezk', sans-serif;
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 1.2vw;
+    font-weight: 200;
+  }
+
+  #memo-logo {
+    z-index: 100;
+    width: 100%;
+    height: max-content;
+    padding: 25px 0;
+    border-radius: 2vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1vh;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+    transition: all 0.5s;
+  }
+
+  #start-button {
+    z-index: 100;
+    width: max-content;
+    height: max-content;
+    margin-top: 4vh;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1vh;
+    filter: drop-shadow(0px 2px 3px #ADFFB0);
+    transition: all 0.5s;
+  }
+
+  #start-button:hover {
+    filter: drop-shadow(0px 2px 3px #adffb000);
+    background-color: rgb(237, 246, 238);
+    cursor: pointer;
+  }
+
+  #logo {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  #shape-container {
+    position: absolute;
+    width: 90vh;
+    height: 90vh;
+    transition: all 1s ease-in-out; /* Smooth transition for shape changes */
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #shape-container {
+    animation: rotate 15s linear infinite;
+  }
+
+  svg {
+    filter: drop-shadow(0px 4px 6px #ADFFB0);
+  }
+
+  #button-container {
+    z-index: 10;
+    position:absolute;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    right: 1vw;
+    top: 2vh;
+  }
+
+  #about-button, #shapes-button {
+    z-index: 100;
+    width: max-content;
+    height: max-content;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1vh;
+    filter: drop-shadow(0px 2px 3px #ADFFB0);
+    transition: all 0.5s;
+  }
+
+  #about-button {
+    margin-right: 1vw;
+  }
+
+  #about-button:hover, #shapes-button:hover {
+    filter: drop-shadow(0px 2px 3px #adffb000);
+    background-color: rgb(237, 246, 238);
+    cursor: pointer;
+  }
+
+  #mode-container {
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    position: absolute;
+    z-index: 100;
+    transition: all 1s;
+  }
+
+  #example-container, #own-container {
+    width: 50vw;
+    height: 100vh;
+}
+
+#example-container {
+    background: linear-gradient(180deg, #ffc2e0 30%, #ffffff 100%);
+}
+
+#own-container {
+    background: linear-gradient(180deg, #fffd85 30%, #ffffff 100%);
+}
+
+#own-overlay {
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #fffd85 30%, #ffffff 100%);
+  transition: all 1s;
+}
+
+#language-container {
+  z-index: 10;
+  position:absolute;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  width: 13vw;
+  height: max-content;
+  left: 1vw;
+  top: 2vh;
+}
+
+#en-button, #fr-button {
+  z-index: 100;
+  width: max-content;
+  height: max-content;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  border-radius: 0.8vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1vh;
+  filter: drop-shadow(0px 2px 3px #ADFFB0);
+  transition: all 0.5s;
+}
+
+#en-button {
+  margin-right: 1vw;
+  filter: drop-shadow(0px 2px 3px #adffb000);
+  background-color: rgb(237, 246, 238);
+}
+
+#en-button:hover, #fr-button:hover {
+  filter: drop-shadow(0px 2px 3px #adffb000);
+  background-color: rgb(237, 246, 238);
+  cursor: pointer;
+}
+
+#en-button-fr, #fr-button-fr {
+  z-index: 100;
+  width: max-content;
+  height: max-content;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  border-radius: 0.8vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1vh;
+  filter: drop-shadow(0px 2px 3px #ADFFB0);
+  transition: all 0.5s;
+}
+
+#fr-button-fr {
+  margin-left: 1vw;
+  filter: drop-shadow(0px 2px 3px #adffb000);
+  background-color: rgb(237, 246, 238);
+}
+
+#en-button-fr:hover, #fr-button-fr:hover {
+  filter: drop-shadow(0px 2px 3px #adffb000);
+  background-color: rgb(237, 246, 238);
+  cursor: pointer;
+}
+
+
+#shapes-overlay {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(180deg, #ffffff 10%, #7aff7e 100%);
+  z-index: 2000;
+  transition: all 1s;
+}

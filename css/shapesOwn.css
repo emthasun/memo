@@ -1,0 +1,143 @@
+/* new font */
+@font-face {
+    font-family: "Apfel Grotezk";
+    src: url(/public/ApfelGrotezk-Regular.otf);
+  }
+  
+  @font-face {
+    font-family: "Combine";
+    src: url(/public/Combine.otf);
+    font-weight: bold;
+  }
+body {
+    margin: 0;
+    opacity: 0;
+    height: 100vh;
+    overflow: visible; /* Prevent scrolling on body */
+    display: flex;
+    background: linear-gradient(180deg, #ffffff 10%, #7aff7e 100%);
+    justify-content: center;
+    align-items: center;
+    font-family: "Apfel Grotezk", sans-serif;
+    transition: all 1s; /* Smooth transition for background changes */
+}
+
+#container-container {
+    position: relative;
+    margin-top: 7vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    position: relative;
+    width: 700px; /* Ensure this comfortably fits the entire circle */
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 190px; /* Adjust width as needed */
+    height: 190px; /* Adjust height as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers SVG at its position */
+    transform-origin: center; /* Ensures rotation around the center */
+    fill: white;
+    filter: drop-shadow(0px 2px 6px #ADFFB0);
+    transition: all 1s;
+}
+
+svg:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 6px #adffb000);
+    width: 230px; /* Adjust width as needed */
+    height: 230px; /* Adjust height as needed */
+}
+
+#shape-text {
+    position: absolute;
+    top: calc(50% + 3vh);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Combine", sans-serif;
+    font-size: 2.2vw;
+    color: rgb(0, 0, 0);
+    text-shadow: 0.0px 20.0px 0.02px #ffffff, 19.6px 4.2px 0.02px #ffffff, 8.4px -18.2px 0.02px #ffffff, -16.0px -12.0px 0.02px #ffffff, -15.2px 13.0px 0.02px #ffffff, 9.6px 17.6px 0.02px #ffffff, 19.2px -5.6px 0.02px #ffffff, -1.4px -20.0px 0.02px #ffffff, -19.8px -3.0px 0.02px #ffffff, -7.0px 18.8px 0.02px #ffffff, 16.8px 10.8px 0.02px #ffffff, 14.2px -14.0px 0.02px #ffffff, -10.8px -16.8px 0.02px #ffffff, -18.8px 7.0px 0.02px #ffffff, 2.8px 19.8px 0.02px #ffffff, 20.0px 1.6px 0.02px #ffffff, 5.8px -19.2px 0.02px #ffffff, -17.4px -9.6px 0.02px #ffffff, -13.2px 15.0px 0.02px #ffffff, 11.8px 16.0px 0.02px #ffffff, 18.2px -8.2px 0.02px #ffffff, -4.2px -19.6px 0.02px #ffffff, -20.0px -0.2px 0.02px #ffffff, -4.4px 19.6px 0.02px #ffffff, 18.2px 8.4px 0.02px #ffffff, 12.2px -16.0px 0.02px #ffffff, -13.0px -15.2px 0.02px #ffffff, -17.6px 9.4px 0.02px #ffffff, 5.4px 19.2px 0.02px #ffffff, 20.0px -1.2px 0.02px #ffffff, 3.0px -19.8px 0.02px #ffffff, -18.6px -7.2px 0.02px #ffffff, -11.0px 16.8px 0.02px #ffffff, 14.0px 14.4px 0.02px #ffffff, 17.0px -10.6px 0.02px #ffffff, -6.8px -18.8px 0.02px #ffffff, -19.8px 2.6px 0.02px #ffffff, -1.6px 20.0px 0.02px #ffffff, 19.2px 5.8px 0.02px #ffffff, 9.8px -17.4px 0.02px #ffffff, -15.0px -13.4px 0.02px #ffffff, -16.2px 11.8px 0.02px #ffffff, 8.0px 18.4px 0.02px #ffffff, 19.6px -4.0px 0.02px #ffffff, 0.4px -20.0px 0.02px #ffffff, -19.4px -4.6px 0.02px #ffffff, -8.6px 18.0px 0.02px #ffffff, 15.8px 12.2px 0.02px #ffffff;
+    text-align: center;
+    opacity: 1;
+    transition: all 1s;
+}
+
+#concept-shape:hover {
+    fill: #ff694b;
+}
+
+#jardin-shape:hover {
+    fill: #b477ff;
+}
+
+#arrierePlan-shape:hover {
+    fill: #ff6aa1;
+}
+
+#serre-shape:hover {
+    fill: #5fbcff;
+}
+
+#atmosphere-shape:hover {
+    fill: #ffb656;
+}
+
+#plante-shape:hover {
+    fill: #77ffdb;
+}
+
+#sensation-shape:hover {
+  fill: #ff87c3;
+}
+
+#button-container {
+    z-index: 10;
+    position:absolute;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    right: 1vw;
+    top: 2vh;
+  }
+  
+  #back-button, #about-button {
+    z-index: 100;
+    width: max-content;
+    height: max-content;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1vh;
+    filter: drop-shadow(0px 2px 3px #ADFFB0);
+    transition: all 0.5s;
+  }
+  
+  #back-button {
+    margin-right: 1vw;
+  }
+  
+  #back-button:hover, #about-button:hover {
+    filter: drop-shadow(0px 2px 3px #adffb000);
+    background-color: rgb(237, 246, 238);
+    cursor: pointer;
+  }
